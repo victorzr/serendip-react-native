@@ -36,13 +36,13 @@ export default function App() {
     if (int >= 3) {
       setNumSides(int);
     } else {
-      createErrorAlert('The total number of sides must be greater than 2');
+      createAlert('The total number of sides must be greater than 2');
     }
   }
 
-  const createErrorAlert = (message) =>{
+  const createAlert = (message) =>{
     Alert.alert(
-      'An error has occurred',
+      'Invalid input',
       message,
       );
     }
@@ -63,10 +63,10 @@ export default function App() {
               if (int >= 0) {
                 setX(int);
               } else {
-                createErrorAlert('X must be greater than 0')
+                createAlert('X must be greater than 0')
               }
             } else if (n != ''){
-              createErrorAlert('X must be a number')
+              createAlert('X must be a number')
             }
 
           }}
@@ -84,10 +84,10 @@ export default function App() {
               if (int <= 10) {
                 setY(int);
               } else {
-                createErrorAlert('Y must be less than or equal to 10')
+                createAlert('Y must be less than or equal to 10')
               }
             } else if (n != ''){
-              createErrorAlert('Y must be a number');
+              createAlert('Y must be a number');
             }
           }}
         />
